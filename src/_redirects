@@ -1,0 +1,12 @@
+# ============================================================
+# GLOBAL 24 GPS DE COLOMBIA — Netlify Redirects
+# ============================================================
+# NOTA: Los redirects 301 de la página vieja se agregarán aquí
+# una vez se proporcione el Markdown con el scraping de la URL antigua.
+# Formato: /ruta-antigua   /ruta-nueva   301
+# ============================================================
+
+# Ejemplo cuando se tenga el scraping:
+# /servicios-gps          /              301
+# /contacto-empresa       /#contacto     301
+# /monitoreo-flotillas    /#solucion     301

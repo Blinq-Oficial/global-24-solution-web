@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel Admin — Global 24 GPS de Colombia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A1628;
+  --bg-card: #0E1E38;
+  --bg-row: rgba(255,255,255,0.03);
+  --bg-row-hover: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.08);
+  --text: #F0EEF5;
+  --text-muted: rgba(255,255,255,0.45);
+  --orange: #E85D1A;
+  --red: #D42B2B;
+  --green: #38A169;
+  --radius: 10px;
+}
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { -webkit-font-smoothing:antialiased; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+
+/* ── GATE ── */
+#gate {
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  background:radial-gradient(ellipse at 50% 0%,rgba(232,93,26,0.12) 0%,transparent 60%);
+}
+.gate-card {
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:16px; padding:48px 40px; width:100%; max-width:400px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4); text-align:center;
+}
+.gate-logo { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.3rem; color:var(--orange); margin-bottom:6px; }
+.gate-sub { font-size:0.8rem; color:var(--text-muted); margin-bottom:32px; letter-spacing:1px; text-transform:uppercase; }
+.gate-card label { display:block; font-size:0.78rem; font-weight:600; color:var(--text-muted); text-align:left; margin-bottom:8px; }
+.gate-card input {
+  width:100%; background:rgba(255,255,255,0.06); border:1px solid var(--border);
+  border-radius:var(--radius); padding:13px 16px; color:var(--text);
+  font-family:'Inter',sans-serif; font-size:0.95rem; outline:none;
+  transition:border-color 0.2s; margin-bottom:20px;
+}
+.gate-card input:focus { border-color:var(--orange); }
+.gate-card button {
+  width:100%; padding:14px; background:linear-gradient(135deg,var(--red),var(--orange));
+  color:#FFF; font-family:'Inter',sans-serif; font-weight:700; font-size:0.95rem;
+  border:none; border-radius:var(--radius); cursor:pointer; transition:opacity 0.2s;
+}
+.gate-card button:hover { opacity:0.88; }
+.gate-error { color:#FC8181; font-size:0.82rem; margin-top:12px; min-height:18px; }
+
+/* ── DASHBOARD ── */
+#dashboard { display:none; }
+.topbar {
+  background:var(--bg-card); border-bottom:1px solid var(--border);
+  padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between;
+  position:sticky; top:0; z-index:10;
+}
+.topbar-brand { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1rem; }
+.topbar-brand span { color:var(--orange); }
+.topbar-meta { font-size:0.8rem; color:var(--text-muted); display:flex; align-items:center; gap:20px; }
+.badge-live { display:inline-flex; align-items:center; gap:6px; }
+.dot-live { width:7px; height:7px; background:var(--green); border-radius:50%; animation:pulse-g 1.8s infinite; }
+@keyframes pulse-g { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.btn-logout { font-size:0.78rem; color:var(--text-muted); background:none; border:1px solid var(--border); border-radius:6px; padding:5px 12px; cursor:pointer; transition:all 0.2s; }
+.btn-logout:hover { color:var(--text); border-color:rgba(255,255,255,0.2); }
+
+.main { padding:32px; max-width:1280px; margin:0 auto; }
+
+.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:32px; }
+.stat-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; }
+.stat-card .label { font-size:0.75rem; color:var(--text-muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+.stat-card .value { font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; color:var(--text); line-height:1; }
+.stat-card .sub { font-size:0.78rem; color:var(--text-muted); margin-top:4px; }
+
+.section-title {
+  font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700;
+  margin-bottom:16px; display:flex; align-items:center; gap:10px;
+}
+.section-title span { font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:500; color:var(--text-muted); }
+.refresh-btn {
+  margin-left:auto; font-size:0.75rem; color:var(--orange); background:none;
+  border:1px solid rgba(232,93,26,0.3); border-radius:6px; padding:5px 12px;
+  cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:6px;
+}
+.refresh-btn:hover { background:rgba(232,93,26,0.08); }
+
+.table-wrap { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.table-wrap table { width:100%; border-collapse:collapse; font-size:0.88rem; }
+.table-wrap thead { background:rgba(255,255,255,0.04); }
+.table-wrap thead th { padding:13px 18px; text-align:left; font-size:0.72rem; font-weight:600; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; border-bottom:1px solid var(--border); white-space:nowrap; }
+.table-wrap tbody tr { background:var(--bg-row); border-bottom:1px solid var(--border); transition:background 0.15s; }
+.table-wrap tbody tr:last-child { border-bottom:none; }
+.table-wrap tbody tr:hover { background:var(--bg-row-hover); }
+.table-wrap tbody td { padding:14px 18px; color:var(--text); vertical-align:top; }
+.td-nombre { font-weight:600; }
+.td-mono { font-family:'Roboto Mono',monospace; font-size:0.82rem; color:rgba(255,255,255,0.7); }
+.td-msg { max-width:320px; color:rgba(255,255,255,0.65); font-size:0.83rem; line-height:1.5; }
+.td-date { font-family:'Roboto Mono',monospace; font-size:0.78rem; color:var(--text-muted); white-space:nowrap; }
+
+.empty-state { padding:60px; text-align:center; color:var(--text-muted); }
+.empty-state svg { margin:0 auto 16px; opacity:0.3; }
+.empty-state p { font-size:0.9rem; }
+
+.loading-row td { text-align:center; padding:50px; color:var(--text-muted); font-size:0.85rem; }
+
+@media(max-width:768px){
+  .main{padding:20px 16px}
+  .topbar{padding:0 16px}
+  .stats-row{grid-template-columns:1fr}
+  .table-wrap table{font-size:0.8rem}
+  .table-wrap thead th,.table-wrap tbody td{padding:10px 12px}
+  .td-msg{max-width:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── AUTH GATE ── -->
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-logo">GLOBAL 24 GPS DE COLOMBIA</div>
+    <div class="gate-sub">Panel de Administración</div>
+    <label for="adminToken">Código de Acceso</label>
+    <input type="password" id="adminToken" placeholder="••••••••" autocomplete="current-password">
+    <button id="loginBtn">Ingresar al Panel</button>
+    <div class="gate-error" id="gateError"></div>
+  </div>
+</div>
+
+<!-- ── DASHBOARD ── -->
+<div id="dashboard">
+  <header class="topbar">
+    <div class="topbar-brand">G24 <span>Admin</span></div>
+    <div class="topbar-meta">
+      <span class="badge-live"><span class="dot-live"></span> En vivo</span>
+      <button class="btn-logout" id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="label">Total Leads</div>
+        <div class="value" id="statTotal">—</div>
+        <div class="sub">Todos los registros</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Último Lead</div>
+        <div class="value" id="statLast" style="font-size:1.1rem;padding-top:6px">—</div>
+        <div class="sub" id="statLastDate"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Leads Hoy</div>
+        <div class="value" id="statToday">—</div>
+        <div class="sub">Fecha actual</div>
+      </div>
+    </div>
+
+    <div class="section-title">
+      Leads Registrados
+      <span id="tableCount"></span>
+      <button class="refresh-btn" id="refreshBtn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        Actualizar
+      </button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Mensaje</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="leadsBody">
+          <tr class="loading-row"><td colspan="6">Cargando leads…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script>
+const STORAGE_KEY = 'g24_admin_token';
+
+// ── Restore session ──
+const savedToken = sessionStorage.getItem(STORAGE_KEY);
+if (savedToken) bootstrap(savedToken);
+
+// ── Login ──
+document.getElementById('loginBtn').addEventListener('click', attemptLogin);
+document.getElementById('adminToken').addEventListener('keydown', e => { if (e.key === 'Enter') attemptLogin(); });
+
+function attemptLogin() {
+  const token = document.getElementById('adminToken').value.trim();
+  if (!token) { showGateError('Ingresa el código de acceso.'); return; }
+  sessionStorage.setItem(STORAGE_KEY, token);
+  bootstrap(token);
+}
+
+function bootstrap(token) {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+  loadLeads(token);
+}
+
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  sessionStorage.removeItem(STORAGE_KEY);
+  location.reload();
+});
+
+document.getElementById('refreshBtn').addEventListener('click', () => {
+  const token = sessionStorage.getItem(STORAGE_KEY);
+  if (token) loadLeads(token);
+});
+
+// ── Fetch leads ──
+async function loadLeads(token) {
+  const tbody = document.getElementById('leadsBody');
+  tbody.innerHTML = '<tr class="loading-row"><td colspan="6">Cargando…</td></tr>';
+
+  try {
+    const res = await fetch('/api/admin/leads', {
+      headers: { 'Authorization': `Bearer ${token}` }
+    });
+
+    if (res.status === 401) {
+      showGateError('Código incorrecto. Intenta de nuevo.');
+      sessionStorage.removeItem(STORAGE_KEY);
+      document.getElementById('gate').style.display = 'flex';
+      document.getElementById('dashboard').style.display = 'none';
+      return;
+    }
+
+    const data = await res.json();
+    const leads = data.leads ?? [];
+
+    renderStats(leads);
+    renderTable(leads);
+  } catch {
+    tbody.innerHTML = '<tr class="loading-row"><td colspan="6">Error al cargar los leads. Verifica la conexión.</td></tr>';
+  }
+}
+
+function renderStats(leads) {
+  document.getElementById('statTotal').textContent = leads.length;
+  const today = new Date().toISOString().slice(0, 10);
+  const todayLeads = leads.filter(l => l.creado_en?.slice(0, 10) === today);
+  document.getElementById('statToday').textContent = todayLeads.length;
+
+  if (leads.length > 0) {
+    const last = leads[0];
+    document.getElementById('statLast').textContent = last.nombre;
+    document.getElementById('statLastDate').textContent = formatDate(last.creado_en);
+  } else {
+    document.getElementById('statLast').textContent = '—';
+  }
+
+  document.getElementById('tableCount').textContent = `${leads.length} resultado${leads.length !== 1 ? 's' : ''}`;
+}
+
+function renderTable(leads) {
+  const tbody = document.getElementById('leadsBody');
+  if (leads.length === 0) {
+    tbody.innerHTML = `
+      <tr><td colspan="6">
+        <div class="empty-state">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <p>Sin leads registrados aún.</p>
+        </div>
+      </td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = leads.map((l, i) => `
+    <tr>
+      <td class="td-mono">${leads.length - i}</td>
+      <td class="td-nombre">${esc(l.nombre)}</td>
+      <td class="td-mono">${esc(l.telefono) || '<span style="opacity:0.3">—</span>'}</td>
+      <td class="td-mono">${esc(l.email) || '<span style="opacity:0.3">—</span>'}</td>
+      <td class="td-msg">${esc(l.mensaje) || '<span style="opacity:0.3">—</span>'}</td>
+      <td class="td-date">${formatDate(l.creado_en)}</td>
+    </tr>
+  `).join('');
+}
+
+function formatDate(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  return d.toLocaleDateString('es-CO', { day:'2-digit', month:'short', year:'numeric' })
+    + ' ' + d.toLocaleTimeString('es-CO', { hour:'2-digit', minute:'2-digit' });
+}
+
+function esc(str) {
+  if (!str) return '';
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function showGateError(msg) {
+  document.getElementById('gateError').textContent = msg;
+}
+</script>
+</body>
+</html>

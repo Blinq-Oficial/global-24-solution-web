@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso a Plataformas | Global 24 GPS Colombia S.A.S</title>
+<meta name="description" content="Acceda a su panel de monitoreo GPS. Rastreo GPS, ATS Solutions y Global 24 Mobile — PC, Android e iOS.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="robots" content="noindex, nofollow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://global24solution.com/plataformas.html">
+<meta property="og:title" content="Acceso a Plataformas | Global 24 GPS Colombia S.A.S">
+<meta property="og:description" content="Acceda a su panel de monitoreo GPS. Rastreo GPS, ATS Solutions y Global 24 Mobile — PC, Android e iOS.">
+<meta property="og:image" content="https://global24solution.com/assets/og-image.png">
+<meta property="og:image:alt" content="Flota Global 24 GPS de Colombia con señal satelital — Cobertura total">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Global 24 GPS Colombia S.A.S">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Acceso a Plataformas | Global 24 GPS Colombia S.A.S">
+<meta name="twitter:description" content="Acceda a su panel de monitoreo GPS — PC, Android e iOS.">
+<meta name="twitter:image" content="https://global24solution.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;background:#F5F3F0;color:#1A1219;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+
+/* === NAV === */
+.pnav{
+  position:fixed;width:100%;top:0;z-index:1000;
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(10,22,40,0.08);height:68px;display:flex;align-items:center;padding:0 5%;
+  transition:box-shadow 0.3s;
+}
+.pnav.scrolled{box-shadow:0 4px 16px rgba(10,22,40,0.08)}
+.pnav-inner{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.pnav-brand{display:flex;align-items:center;gap:12px}
+.pnav-brand img{height:46px;width:auto;object-fit:contain}
+.pnav-brand span{font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:1.3rem;letter-spacing:0.06em;text-transform:uppercase;background:linear-gradient(135deg,#D42B2B,#E85D1A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pnav-brand .b24{-webkit-text-fill-color:#E85D1A}
+.pnav-actions{display:flex;align-items:center;gap:10px}
+.pnav-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s}
+.pnav-btn-ghost{background:transparent;color:#4A4350;border:1.5px solid rgba(10,22,40,0.1)}
+.pnav-btn-ghost:hover{border-color:#E85D1A;color:#0A1628}
+.pnav-btn-primary{background:linear-gradient(135deg,#D42B2B,#E85D1A);color:#FFF;box-shadow:0 3px 12px rgba(212,43,43,0.25)}
+.pnav-btn-primary:hover{transform:translateY(-1px);box-shadow:0 5px 18px rgba(212,43,43,0.35)}
+/* Hamburger — hidden on desktop */
+.pnav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;z-index:1001}
+.pnav-toggle span{width:24px;height:2.5px;background:#1A1219;border-radius:2px;transition:all 0.2s}
+
+@media(max-width:768px){
+  .pnav-actions{display:none}
+  .pnav-toggle{display:flex}
+}
+
+/* === PAGE LAYOUT === */
+.plat-page{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;
+  padding:100px 5% 50px;
+}
+
+/* Back link */
+.plat-back{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:0.88rem;font-weight:600;color:#4A4350;
+  margin-bottom:36px;transition:color 0.2s;
+}
+.plat-back:hover{color:#E85D1A}
+.plat-back svg{width:18px;height:18px}
+
+/* Hero header */
+.plat-hero{text-align:center;margin-bottom:40px;max-width:520px}
+.plat-hero .plat-label{
+  font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;color:#E85D1A;margin-bottom:14px;display:block;
+}
+.plat-hero h1{
+  font-family:'Space Grotesk',sans-serif;font-size:clamp(1.55rem,4vw,2.2rem);
+  font-weight:800;color:#1A1219;line-height:1.2;margin-bottom:18px;
+}
+.plat-hero h1 .accent{color:#F95B3D}
+.plat-hero p{font-size:0.95rem;color:#4A4350;line-height:1.7;max-width:440px;margin:0 auto}
+
+/* === PLATFORM CARDS === */
+.plat-cards-wrap{width:100%;max-width:520px;display:flex;flex-direction:column;gap:20px}
+
+.plat-card-group{
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 2px 12px rgba(10,22,40,0.06);
+}
+/* Device header */
+.plat-dh{
+  display:flex;align-items:center;gap:10px;
+  padding:14px 20px;font-size:0.78rem;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;
+}
+.plat-dh svg{flex-shrink:0}
+.plat-dh-pc{background:#E3F2FD;color:#1565C0}
+.plat-dh-android{background:#E8F5E9;color:#2E7D32}
+.plat-dh-ios{background:#F3F3F6;color:#555}
+
+/* Platform rows */
+.plat-list{list-style:none}
+.plat-item{border-bottom:1px solid rgba(10,22,40,0.05)}
+.plat-item:last-child{border-bottom:none}
+.plat-link{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 20px;background:#FFF;
+  transition:background 0.15s;
+}
+.plat-link:hover{background:rgba(249,91,61,0.04)}
+.plat-link-disabled{opacity:0.35;pointer-events:none;cursor:default}
+
+.plat-lvl{
+  font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:800;
+  letter-spacing:1.5px;text-transform:uppercase;color:#F95B3D;
+  min-width:42px;line-height:1.2;
+}
+.plat-name{
+  font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;
+  color:#1A1219;flex:1;
+}
+.plat-arrow{
+  width:18px;height:18px;stroke:#999;flex-shrink:0;
+  transition:stroke 0.15s,transform 0.15s;
+}
+.plat-link:hover .plat-arrow{stroke:#F95B3D;transform:translate(2px,-2px)}
+
+/* Footer */
+.plat-footer{
+  margin-top:48px;padding-top:24px;
+  border-top:1px solid rgba(10,22,40,0.08);
+  text-align:center;font-size:0.8rem;color:#71687A;
+  max-width:520px;width:100%;
+}
+.plat-footer a{color:#E85D1A;font-weight:600}
+.plat-footer a:hover{color:#D42B2B}
+.plat-footer p+p{margin-top:6px}
+
+/* === RESPONSIVE === */
+@media(max-width:480px){
+  .plat-page{padding:88px 4% 40px}
+  .plat-hero h1{font-size:1.45rem}
+  .plat-hero p{font-size:0.9rem}
+  .plat-dh{padding:12px 16px;font-size:0.72rem}
+  .plat-link{padding:14px 16px;gap:12px}
+  .plat-name{font-size:0.9rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="pnav" id="mainNav">
+  <div class="pnav-inner">
+    <a href="/" class="pnav-brand">
+      <img src="assets/logo-light.jpeg" alt="Global 24 GPS de Colombia">
+    </a>
+    <div class="pnav-actions">
+      <a href="/" class="pnav-btn pnav-btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Volver al Inicio
+      </a>
+      <a href="https://wa.me/573175156456" class="pnav-btn pnav-btn-primary" target="_blank">Soporte</a>
+    </div>
+    <div class="pnav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="plat-page">
+
+  <a href="/" class="plat-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Volver a la página principal
+  </a>
+
+  <div class="plat-hero">
+    <span class="plat-label">Acceso a Plataformas</span>
+    <h1>Ingrese a su Panel de <span class="accent">Monitoreo</span></h1>
+    <p>Seleccione su dispositivo y nivel de acceso para conectarse al sistema de rastreo de su flota.</p>
+  </div>
+
+  <!-- PC / WEB -->
+  <div class="plat-cards-wrap">
+
+    <div class="plat-card-group">
+      <div class="plat-dh plat-dh-pc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        PC / WEB
+      </div>
+      <ul class="plat-list">
+        <li class="plat-item">
+          <a href="https://trackingvip.gservicetrack.com/trackingvip/" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>1</span>
+            <span class="plat-name">Rastreo GPS</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+        <li class="plat-item">
+          <a href="https://global.atssolutions.co/Login?ID=2" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>2</span>
+            <span class="plat-name">ATS Solutions</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+        <li class="plat-item">
+          <a href="https://mapas.global24solution.com/login" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>3</span>
+            <span class="plat-name">Global 24 Mobile</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ANDROID -->
+    <div class="plat-card-group">
+      <div class="plat-dh plat-dh-android">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.36.6 1.24 0 1.6l-14 8.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+        ANDROID
+      </div>
+      <ul class="plat-list">
+        <li class="plat-item">
+          <a href="https://play.google.com/store/apps/details?id=rastreogpsapp.com.rgv2" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>1</span>
+            <span class="plat-name">Rastreo GPS APP v2</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+        <li class="plat-item">
+          <a href="https://global.atssolutions.co/Login?ID=2" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>2</span>
+            <span class="plat-name">ATS Solutions</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+        <li class="plat-item">
+          <a href="https://play.google.com/store/apps/details?id=com.globalgpssolution.platform&pli=1" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>3</span>
+            <span class="plat-name">Global Mobile</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- iOS -->
+    <div class="plat-card-group">
+      <div class="plat-dh plat-dh-ios">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        iOS
+      </div>
+      <ul class="plat-list">
+        <li class="plat-item">
+          <a href="https://apps.apple.com/us/app/rg/id1392657121?l=es&ls=1" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>1</span>
+            <span class="plat-name">RG</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+        <li class="plat-item">
+          <div class="plat-link plat-link-disabled">
+            <span class="plat-lvl">Nivel<br>2</span>
+            <span class="plat-name" style="font-style:italic;font-family:'Inter',sans-serif;font-weight:400;font-size:0.85rem">No disponible</span>
+          </div>
+        </li>
+        <li class="plat-item">
+          <a href="https://apps.apple.com/co/app/global-24-mobile/id6746206615" class="plat-link" target="_blank" rel="noopener noreferrer">
+            <span class="plat-lvl">Nivel<br>3</span>
+            <span class="plat-name">Global 24 Mobile</span>
+            <svg class="plat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="plat-footer">
+    <p>¿Problemas para acceder? Contacte soporte: <a href="mailto:soporte@global24solution.com">soporte@global24solution.com</a> · <a href="tel:+573175156456">317 515 6456</a></p>
+    <p>© 2026 GLOBAL 24 GPS COLOMBIA S.A.S. — NIT 901.708.226-6</p>
+  </div>
+
+</div>
+
+<script>
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.pageYOffset>50)},{passive:true});
+</script>
+</body>
+</html>

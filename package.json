@@ -1,0 +1,17 @@
+{
+  "name": "global24solution",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/database": "^1.0.0",
+    "@netlify/functions": "^2.0.0"
+  },
+  "devDependencies": {
+    "jimp": "^1.6.1",
+    "typescript": "^5.4.0"
+  }
+}

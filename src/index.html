@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global 24 GPS de Colombia | Monitoreo GPS Corporativo en Tiempo Real</title>
+<meta name="description" content="Global 24 GPS Colombia S.A.S — Rastreo satelital, control de flotas y gestión de activos en Bogotá. Monitoreo GPS en tiempo real, geocercas inteligentes, instalación profesional y soporte 24/7.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Canonical & SEO -->
+<link rel="canonical" href="https://global24solution.com/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Social Preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://global24solution.com/">
+<meta property="og:title" content="Global 24 GPS de Colombia | Monitoreo GPS Corporativo en Tiempo Real">
+<meta property="og:description" content="Rastreo satelital, control de flotas y gestión de activos en Bogotá. Monitoreo GPS en tiempo real, geocercas inteligentes, instalación profesional y soporte 24/7.">
+<meta property="og:image" content="https://global24solution.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Global 24 GPS de Colombia — Monitoreo GPS Corporativo en Tiempo Real">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Global 24 GPS de Colombia">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Global 24 GPS de Colombia | Monitoreo GPS Corporativo">
+<meta name="twitter:description" content="Rastreo satelital, control de flotas y gestión de activos. Monitoreo GPS en tiempo real con soporte 24/7.">
+<meta name="twitter:image" content="https://global24solution.com/assets/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cotizacion-styles.css">
+
+<style>
+/* === ACCORDION SYSTEM === */
+.accordion-wrapper { max-width: 900px; margin: 20px auto 0; padding: 0 4%; }
+.accordion-item {
+  background: var(--bg-secondary); border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md); margin-bottom: 16px; overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: box-shadow var(--transition-fast);
+}
+.accordion-item:hover { box-shadow: var(--shadow-md); }
+.accordion-header {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 20px; background: transparent; border: none; cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700;
+  color: var(--brand-navy); transition: background var(--transition-fast);
+  text-align: left; gap: 12px;
+}
+.accordion-header:hover { background: rgba(232,93,26,0.03); }
+.accordion-icon {
+  width: 24px; height: 24px; border-radius: 50%; min-width: 24px;
+  background: rgba(232,93,26,0.1); display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s ease;
+}
+.accordion-icon svg { width: 14px; height: 14px; stroke: var(--brand-orange); stroke-width: 3; }
+.accordion-item.active .accordion-icon { transform: rotate(180deg); background: var(--brand-orange); }
+.accordion-item.active .accordion-icon svg { stroke: #FFF; }
+.accordion-content {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+  background: var(--bg-primary);
+}
+.accordion-content-inner { padding: 16px; border-top: 1px solid var(--glass-border); }
+
+/* Compact adjustments for accordion tables */
+.accordion-content .compare-table-wrap { margin-top: 0; box-shadow: none; border-radius: var(--radius-sm); }
+.accordion-content .devices-grid, .accordion-content .benefits-grid, .accordion-content .camera-grid { padding: 0; gap: 12px; }
+.accordion-content .benefit-card, .accordion-content .camera-card, .accordion-content .device-card { padding: 16px; }
+
+
+/* === MOBILE OPTIMIZATION PATCH === */
+
+@media(max-width:768px){
+  .problema-cards { grid-template-columns: 1fr !important; }
+}
+
+@media(max-width:480px){
+  .accordion-content .benefits-grid { grid-template-columns: 1fr !important; }
+  .accordion-header { font-size: 0.9rem; padding: 14px 16px; }
+  .accordion-content-inner { padding: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="glass-nav" id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="#hero" class="nav-brand-link">
+        <img src="assets/logo-transparent.png" alt="Global 24 GPS de Colombia" class="logo-img">
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-close-item">
+        <button class="nav-close-btn" id="navClose" aria-label="Cerrar menú">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </li>
+      <li><a href="#problema">El Problema</a></li>
+      <li><a href="#solucion">Soluciones</a></li>
+      <li class="nav-has-dropdown">
+        <a href="#porque" class="nav-dropdown-trigger">
+          Nosotros
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="#porque"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>¿Por qué elegirnos?</a></li>
+          <li><a href="#mision"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>Misión y Visión</a></li>
+          <li><a href="#testimonials"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Clientes y Testimonios</a></li>
+          <li><a href="#sectores"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M1 10h22"/></svg>Sectores que Atendemos</a></li>
+        </ul>
+      </li>
+      <li class="nav-mobile-cta nav-plataformas-cta"><a href="plataformas.html">Plataformas</a></li>
+      <li class="nav-mobile-cta nav-contacto-cta"><a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="plataformas.html" class="btn btn-ghost nav-cta">Plataformas</a>
+      <a href="#contacto" class="btn btn-primary nav-cta">Contacto</a>
+    </div>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <span class="section-label typewriter">Monitoreo GPS Corporativo</span>
+    <h1>Seguimiento Satelital Avanzado. <span>Su Flota Siempre Conectada.</span></h1>
+    <p class="hero-description">Optimice su logística en tiempo real y tome control total de su operación. Sistema de monitoreo GPS de precisión adaptado para empresas que no pueden permitirse un solo punto ciego.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn btn-primary">Agendar Demostración</a>
+      <a href="#solucion" class="btn btn-secondary">Ver Soluciones</a>
+    </div>
+    <div class="security-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      Conexión cifrada TLS 1.3 · Plataforma 100% en la nube
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-number mono">24/7</span><span class="stat-label">Monitoreo Continuo</span></div>
+      <div class="stat-item"><span class="stat-number mono" data-target="100" data-suffix="%">0%</span><span class="stat-label">Cloud Computing</span></div>
+      <div class="stat-item"><span class="stat-number mono">API</span><span class="stat-label">Integración Total</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="float-card float-card-top">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="card-value">Geocerca Activa</div>
+      <div class="card-desc">Zona norte verificada</div>
+    </div>
+    <div class="hero-image-wrapper">
+      <div class="live-badge"><div class="live-dot"></div><span class="live-text">En Vivo</span></div>
+      <div class="radar-pulse"></div>
+      <img src="assets/hero-bg.png" alt="Sistema de monitoreo GPS Global 24 GPS de Colombia en acción">
+    </div>
+    <div class="float-card float-card-bottom">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="card-value mono">4.6951° N</div>
+      <div class="card-desc">Última ubicación GPS</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar reveal">
+  <p>Empresas que confían en nosotros</p>
+  <div class="trust-logos">
+    <span>SERVITAC S.A.S</span><span>FANALCA S.A</span><span>GRUPO TCC</span><span>EXPRESO LA ORTEGUNA</span><span>ACUEDUCTO BOGOTA</span>
+  </div>
+</div>
+
+<!-- PROBLEMA & VITALIDAD (INTERACTIVO) -->
+<section class="problema" id="problema">
+  <div class="section-header-center reveal" style="margin-bottom:50px">
+    <span class="section-label">El Problema</span>
+    <h2>¿Sabe Cuánto Le Cuesta No Tener Visibilidad?</h2>
+    <p class="section-subtitle">Cada minuto sin monitoreo en tiempo real es un minuto donde su carga, su inversión y la confianza de sus clientes están en riesgo.</p>
+  </div>
+  <div class="problema-content">
+    <div class="problema-image reveal-left"><img src="assets/problem-bg.png" alt="Gerente de logística en control total de sus operaciones"></div>
+    <div class="problema-cards stagger-children">
+      <div class="dolor-card">
+        <div class="dolor-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div><h3>Pérdida de Carga</h3><p>Sin visibilidad en tiempo real, detectar desvíos o paradas no autorizadas es una apuesta costosa.</p></div>
+      </div>
+      <div class="dolor-card">
+        <div class="dolor-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><h3>Ineficiencia Operativa</h3><p>Rutas no optimizadas, tiempos muertos y consumo excesivo de combustible drenan su rentabilidad.</p></div>
+      </div>
+      <div class="dolor-card">
+        <div class="dolor-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div><h3>Clientes Perdidos</h3><p>Sin reportes verificables ni trazabilidad, la confianza se erosiona y los contratos se pierden.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion: Vitalidad del GPS -->
+  <div class="accordion-wrapper reveal" style="margin-top: 60px;">
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Razones Clave para Implementar GPS Hoy
+        <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="benefits-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="benefit-card">
+              <div class="benefit-num">1</div><p><strong>Ubicación precisa:</strong> Conocer la ubicación de cualquier activo vehicular para monitorear seguridad y optimizar recursos.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-num">2</div><p><strong>Información en tiempo real:</strong> Analizar kilómetros recorridos, localizar ubicación y conocer desvíos o atascos (Nivel 3).</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-num">3</div><p><strong>Gestión de combustible:</strong> Comparar cantidad de kilómetros con gastos y mejorar gestión de repuestos.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-num">4</div><p><strong>Trazabilidad de combustible:</strong> Control preciso del consumo por ruta y detección de anomalías en el manejo de la carga.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-num">5</div><p><strong>Mejora la experiencia del cliente:</strong> Cadenas logísticas eficaces que aseguran entregas rápidas y óptimas.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-num">6</div><p><strong>Pólizas de seguro más económicas:</strong> El rastreo GPS disminuye significativamente el riesgo de siniestros, abaratando el seguro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIÓN & MDVR (INTERACTIVO) -->
+<section class="solucion" id="solucion">
+  <div class="section-header-center reveal">
+    <span class="section-label">La Solución</span>
+    <h2>Tecnología GPS que Protege su Inversión</h2>
+    <p class="section-subtitle">Monitoreo inteligente diseñado para empresas que exigen control absoluto sobre su operación logística.</p>
+  </div>
+  <div class="solucion-grid stagger-children">
+    <div class="servicio-card">
+      <div class="servicio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h3>Monitoreo GPS Vehicular</h3>
+      <p>Seguimiento satelital en tiempo real mediante plataforma web y móvil.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>Instalación Profesional</h3>
+      <p>Técnicos certificados para vehículos particulares, comerciales y maquinaria.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <h3>Plataforma de Rastreo</h3>
+      <p>Consultar recorridos, reportes automáticos, geocercas y administrar su operación.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M1 10h22"/><circle cx="7" cy="14" r="1.5"/><circle cx="17" cy="14" r="1.5"/></svg></div>
+      <h3>Monitoreo de Activos</h3>
+      <p>Control y localización de contenedores, remolques y equipos de alto valor.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+      <h3>Soporte Técnico 24/7</h3>
+      <p>Atención remota y presencial para diagnóstico y solución de inconvenientes.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></div>
+      <h3>Integración y API</h3>
+      <p>Conexión vía API REST e integración con plataformas externas (ERP/TMS).</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SHOWCASE -->
+<section class="video-showcase">
+  <div class="video-showcase-layout">
+    <div class="video-showcase-player reveal-left">
+      <video autoplay loop muted playsinline>
+        <source src="assets/video-tracking.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-showcase-content reveal-right">
+      <span class="section-label">Vea el Sistema en Acción</span>
+      <h2>Monitoreo GPS <span class="gradient-text">en Tiempo Real</span></h2>
+      <p>Observe cómo nuestro sistema rastrea cada vehículo de su flota con precisión milimétrica. Control total desde cualquier dispositivo, en cualquier momento.</p>
+      <ul class="video-features-list">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Rastreo satelital con actualizaciones constantes</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Alertas automáticas por exceso de velocidad</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Historial de rutas y exportación a PDF</li>
+      </ul>
+      <div class="video-cta-strip">
+        <a href="#contacto" class="btn btn-primary">Solicitar Demo Gratuita</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVA PLATAFORMAS -->
+<section class="compare-section" id="plataformas-compare">
+  <div class="section-header-center reveal">
+    <span class="section-label">Plataformas de Gestión</span>
+    <h2>Plataformas <span class="gradient-text">Nivel 1 y Nivel 3</span></h2>
+    <p class="section-subtitle">Dos niveles de plataforma para adaptarse a su presupuesto y requerimientos logísticos.</p>
+  </div>
+
+  <!-- Level Summary Cards -->
+  <div class="level-summary-grid reveal">
+    <div class="level-summary-card">
+      <div class="level-summary-badge level-badge-n1">Nivel 1</div>
+      <h3>Esencial</h3>
+      <p>Monitoreo básico con las herramientas fundamentales para el control de su flota.</p>
+      <div class="level-summary-features">
+        <div class="level-feature-stat">
+          <span class="level-feature-num">4</span>
+          <span class="level-feature-label">Funciones incluidas</span>
+        </div>
+        <div class="level-feature-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3"/></svg>
+          <span class="level-feature-label">Soporte WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="level-summary-card level-summary-featured">
+      <div class="level-summary-badge level-badge-n3">Nivel 3</div>
+      <span class="level-recommended">Recomendado</span>
+      <h3>Avanzada</h3>
+      <p>Suite completa con analítica, enrutamiento, API de integración y servicios adicionales.</p>
+      <div class="level-summary-features">
+        <div class="level-feature-stat">
+          <span class="level-feature-num">8</span>
+          <span class="level-feature-label">Todas las funciones</span>
+        </div>
+        <div class="level-feature-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span class="level-feature-label">API e integraciones</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison Table — always visible -->
+  <div class="compare-table-wrap reveal">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Informes y Servicios</th>
+          <th class="th-nivel1">Nivel 1</th>
+          <th class="th-nivel3">Nivel 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-divider"><td colspan="4">Reportes</td></tr>
+        <tr><td>1</td><td>Excesos de velocidad</td><td class="check-yes">SI</td><td class="check-yes">SI</td></tr>
+        <tr><td>2</td><td>Hábitos de conducción</td><td class="check-no">NO</td><td class="check-yes">SI</td></tr>
+        <tr><td>3</td><td>Posicionamiento de paradas</td><td class="check-no">NO</td><td class="check-yes">SI</td></tr>
+        <tr class="section-divider"><td colspan="4">Herramientas Operativas</td></tr>
+        <tr><td>4</td><td>Geocercas</td><td class="check-yes">SI</td><td class="check-yes">SI</td></tr>
+        <tr><td>5</td><td>Enrutamientos</td><td class="check-no">NO</td><td class="check-yes">SI</td></tr>
+        <tr><td>6</td><td>Unidades más cercanas</td><td class="check-no">NO</td><td class="check-yes">SI</td></tr>
+        <tr class="section-divider"><td colspan="4">Actualizaciones y Soporte</td></tr>
+        <tr><td>7</td><td>Atención personalizada WhatsApp</td><td class="check-yes">SI</td><td class="check-yes">SI</td></tr>
+        <tr class="section-divider"><td colspan="4">Servicios con Diferentes Aplicativos</td></tr>
+        <tr><td>8</td><td>Pre-operacional y FUEC</td><td class="check-no">NO</td><td class="check-yes">SI</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="compare-footer reveal">
+    <p>* La plataforma <strong>Nivel 2 (ATS Solutions)</strong> está disponible para flotas con requerimientos intermedios.</p>
+    <a href="#modalidades" class="btn btn-primary">Ver Precios y Modalidades</a>
+  </div>
+</section>
+
+<!-- MODALIDADES & PRECIOS -->
+<section class="modalidades" id="modalidades">
+  <div class="section-header-center reveal">
+    <span class="section-label">Modelos de Negocio</span>
+    <h2>Planes y <span class="gradient-text">Modalidades</span></h2>
+    <p class="section-subtitle">Soluciones adaptadas al tamaño de su operación. Cotización exenta de IVA en la mensualidad.</p>
+  </div>
+  
+  <div class="modalidades-grid stagger-children">
+    <div class="modalidad-card">
+      <div class="modalidad-card-top">
+        <div class="modalidad-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 12V8H6a2 2 0 01-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg></div>
+        <h3>Modalidad Venta</h3>
+        <span class="modalidad-subtitle">Contrato a 1 año</span>
+        <p>El dispositivo GPS pasa a ser propiedad del cliente desde el primer día.</p>
+      </div>
+      <div class="modalidad-card-pricing">
+        <div class="modalidad-price-row">
+          <span class="modalidad-level">Nivel 1</span>
+          <span class="modalidad-amount">$33.000<small> / móvil / mes</small></span>
+        </div>
+        <div class="modalidad-price-row modalidad-price-row-alt">
+          <span class="modalidad-level modalidad-level-premium">Nivel 3</span>
+          <span class="modalidad-amount">$40.700<small> / móvil / mes</small></span>
+        </div>
+      </div>
+      <div class="modalidad-card-footer">
+        <p class="modalidad-note">* GPS no incluido (ver catálogo desplegable).</p>
+        <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20Modalidad%20Venta%20para%20mi%20flota" class="btn btn-whatsapp modalidad-cta" target="_blank">Me interesa Modalidad Venta</a>
+      </div>
+    </div>
+
+    <div class="modalidad-card modalidad-featured">
+      <div class="modalidad-badge">Grandes Flotas</div>
+      <div class="modalidad-card-top">
+        <div class="modalidad-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg></div>
+        <h3>Modalidad Comodato</h3>
+        <span class="modalidad-subtitle">GPS 4G incluido</span>
+        <p>Sin inversión inicial en equipos. Tras 18 meses de servicio continuo, el GPS queda en su propiedad.</p>
+      </div>
+      <div class="modalidad-card-pricing">
+        <div class="modalidad-price-row">
+          <span class="modalidad-level">Nivel 1</span>
+          <span class="modalidad-amount">$48.000<small> / móvil / mes</small></span>
+        </div>
+        <div class="modalidad-price-row modalidad-price-row-alt">
+          <span class="modalidad-level modalidad-level-premium">Nivel 3</span>
+          <span class="modalidad-amount">$55.700<small> / móvil / mes</small></span>
+        </div>
+      </div>
+      <div class="modalidad-card-footer">
+        <p class="modalidad-note">* Instalación: $65.000 + IVA (ciudades principales).</p>
+        <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20Modalidad%20Comodato%20para%20mi%20flota" class="btn btn-whatsapp modalidad-cta" target="_blank">Me interesa Modalidad Comodato</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion: Venta de Equipos GPS -->
+  <div class="accordion-wrapper reveal" style="margin-top: 20px;">
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Ver Catálogo de Dispositivos GPS y Adicionales
+        <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="devices-grid">
+            <div class="device-card" style="box-shadow:none;">
+              <span class="device-badge">Teltonika</span>
+              <h3>GPS-AVL 4G LTE Básica</h3>
+              <p class="device-features">Ignición, Pánico, apagado remoto, BUZZER con acelerómetro.</p>
+              <div class="device-prices"><span class="device-old-price">$355.000</span><span class="device-new-price">$264.874 + IVA</span></div>
+            </div>
+            <div class="device-card" style="box-shadow:none;">
+              <span class="device-badge">Marca Propia</span>
+              <h3>GPS-AVL 4G LTE Estándar</h3>
+              <p class="device-features">Ignición, Pánico, apagado remoto, todos los servicios.</p>
+              <div class="device-prices"><span class="device-old-price">$264.874</span><span class="device-new-price">$222.583 + IVA</span></div>
+            </div>
+          </div>
+          <div class="accordion-addons-note">
+            Servicios adicionales (Nivel 3): FUEC ($1.500/auto), Pre-Operacional ($5.500/auto), Form. Control ($45.000/app).
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion: MDVR -->
+  <div class="accordion-wrapper reveal" style="margin-top: 12px;">
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>Ver Cámaras MDVR de Telemetría Avanzada (GPS 4G)
+        <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="camera-grid">
+            <div class="camera-card" style="box-shadow:none;">
+              <h3>MDVR - Opción 1 (Plataforma Nivel 3)</h3>
+              <ul class="camera-specs">
+                <li>Lente de cámara dual 1080P</li>
+                <li>Comportamiento del conductor (ADAS/DMS)</li>
+                <li>Video en la nube y Wifi + 4G/3G/2G</li>
+              </ul>
+              <div class="camera-pricing-row"><span class="camera-pricing-label">Equipo + Inst.</span><span class="camera-pricing-value">$1.520.522 (IVA inc.)</span></div>
+              <div class="camera-pricing-row"><span class="camera-pricing-label">Mensualidad</span><span class="camera-pricing-value">$84.150</span></div>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20c%C3%A1mara%20MDVR%20Opci%C3%B3n%201" class="btn btn-whatsapp modalidad-cta" target="_blank">Cotizar Opción 1</a>
+            </div>
+            <div class="camera-card" style="box-shadow:none;">
+              <h3>MDVR - Opción 2 (Plataforma Nativa)</h3>
+              <ul class="camera-specs">
+                <li>Lente de cámara dual 1080P</li>
+                <li>Video en la nube y Wifi + 4G/3G/2G</li>
+                <li>Plataforma nativa sin API/Desarrollos</li>
+              </ul>
+              <div class="camera-pricing-row"><span class="camera-pricing-label">Equipo + Inst.</span><span class="camera-pricing-value">$1.520.522 (IVA inc.)</span></div>
+              <div class="camera-pricing-row"><span class="camera-pricing-label">Mensualidad</span><span class="camera-pricing-value">$69.300</span></div>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20c%C3%A1mara%20MDVR%20Opci%C3%B3n%202" class="btn btn-whatsapp modalidad-cta" target="_blank">Cotizar Opción 2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<div class="timeline-section">
+  <div class="section-header-center reveal" style="margin-bottom:50px">
+    <span class="section-label">Proceso</span>
+    <h2>Proceso de Implementación</h2>
+  </div>
+  <div class="timeline stagger-children">
+    <div class="timeline-step"><div class="timeline-dot">1</div><h3>Instalación</h3><p>Dispositivos GPS en cada vehículo, por técnicos certificados</p></div>
+    <div class="timeline-step"><div class="timeline-dot">2</div><h3>Capacitación</h3><p>Capacitación personalizada de la plataforma para su equipo</p></div>
+    <div class="timeline-step"><div class="timeline-dot">3</div><h3>Control Total</h3><p>Monitoreo continuo y atención personalizada por WhatsApp</p></div>
+  </div>
+</div>
+
+<!-- COUNTERS -->
+<div class="counters">
+  <div class="counters-grid stagger-children">
+    <div class="counter-item"><div class="counter-value" data-target="34">0</div><div class="counter-label">Empresas Clientes</div></div>
+    <div class="counter-item"><div class="counter-value">2</div><div class="counter-label">Niveles de Plataforma</div></div>
+    <div class="counter-item"><div class="counter-value">2023</div><div class="counter-label">Año de Fundación</div></div>
+    <div class="counter-item"><div class="counter-value">24/7</div><div class="counter-label">Monitoreo Continuo</div></div>
+  </div>
+</div>
+
+<!-- POR QUÉ (CON VIDEO DISPATCH) -->
+<section class="porque" id="porque">
+  <div class="section-header-center reveal" style="margin-bottom:50px">
+    <span class="section-label">¿Por qué Global 24 GPS Colombia?</span>
+    <h2>Respaldo Operativo las 24 Horas</h2>
+    <p class="section-subtitle">Nuestros pilares: Desarrollo continuo, Cultura de Innovación, y Clientes Aliados.</p>
+  </div>
+  <div class="porque-layout">
+    <div class="porque-image reveal-scale">
+      <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block">
+        <source src="assets/video-dispatch.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="porque-cards stagger-children">
+      <div class="porque-card">
+        <div class="porque-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div><h3>Monitoreo Centralizado</h3><p>Operadores gestionan el panel de activos y atienden las alertas de toda la flota desde una sola plataforma.</p></div>
+      </div>
+      <div class="porque-card">
+        <div class="porque-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <div><h3>Seguridad Empresarial</h3><p>Encriptación de datos y protocolos certificados.</p></div>
+      </div>
+      <div class="porque-card">
+        <div class="porque-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <div><h3>App Móvil 24/7</h3><p>Controle toda su flota desde su celular (iOS y Android).</p></div>
+      </div>
+      <div class="porque-card">
+        <div class="porque-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div><h3>Atención Personalizada</h3><p>Atención directa por WhatsApp y capacitación personalizada de la plataforma para su equipo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GPS = GANANCIA — Full Impact Banner -->
+<section class="profit-banner">
+  <div class="profit-banner-layout">
+    <div class="profit-banner-image reveal-scale">
+      <img src="assets/gps-ganancia.jpeg" alt="Un GPS no es un gasto, es ganancia neta">
+    </div>
+    <div class="profit-banner-content reveal-right">
+      <span class="section-label">Retorno de Inversión</span>
+      <h2>Un GPS No Es un Gasto. <span class="gradient-text">Es Ganancia Neta.</span></h2>
+      <p>Cada vehículo monitoreado genera ahorros medibles: menos combustible desperdiciado, menos horas muertas. Su inversión se recupera en el primer mes.</p>
+      <div class="profit-stats">
+        <div class="profit-stat-item"><span class="profit-stat-value" style="font-size:1.3rem;">Control Total</span><span class="profit-stat-label">De combustible y rutas</span></div>
+        <div class="profit-stat-item"><span class="profit-stat-value" style="font-size:1.3rem;">Mantenimiento</span><span class="profit-stat-label">Preventivo, por kilometraje u horas de motor</span></div>
+        <div class="profit-stat-item"><span class="profit-stat-value" style="font-size:1.3rem;">Pólizas Bajas</span><span class="profit-stat-label">Menor riesgo, menor costo</span></div>
+      </div>
+      <a href="#contacto" class="btn btn-primary">Calcular Mi Ahorro</a>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="cobertura-section">
+  <div class="cobertura-layout">
+    <div class="cobertura-image reveal-scale">
+      <img src="assets/cobertura-total.jpeg" alt="Cobertura nacional Global 24 GPS de Colombia">
+    </div>
+    <div class="cobertura-content reveal-right">
+      <span class="section-label">Cobertura Nacional</span>
+      <h2>Cobertura Nacional <span class="gradient-text">en Toda Colombia.</span></h2>
+      <p>Nuestros dispositivos GPS-AVL 4G LTE operan sobre la red de telefonía móvil disponible en el territorio colombiano, en zonas urbanas y rurales.</p>
+      <ul class="video-features-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>Cobertura en toda la red móvil 4G disponible en Colombia</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>Geocercas y alertas configurables en cualquier zona del país</li>
+      </ul>
+      <a href="#contacto" class="btn btn-primary" style="margin-top:24px">Consultar Cobertura</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACTO -->
+<section class="contacto" id="contacto">
+  <div class="contacto-bg" style="background-image:url('assets/colombia-map.png')"></div>
+  <div class="contacto-wrapper reveal">
+    <span class="section-label">Nosotros Lo Hacemos Por Ti</span>
+    <h2>Hablemos de su Operación</h2>
+    <p class="section-subtitle">Agende una demostración personalizada y elimine los puntos ciegos. Nuestro equipo de expertos está listo para asesorarle.</p>
+    <div class="contacto-actions">
+      <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20una%20demo%20de%20Global%2024%20GPS" class="btn btn-whatsapp" target="_blank">
+        Escribir al WhatsApp
+      </a>
+      <a href="tel:+573005631754" class="btn btn-primary">Llamar Ahora</a>
+    </div>
+    <div class="contacto-emails-grid">
+      <div class="email-card" onclick="copyEmail(this, 'soporte@global24solution.com')">
+        <div class="email-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <span class="email-card-role">Soporte Técnico</span>
+        <span class="email-card-address">soporte@global24solution.com</span>
+        <span class="email-card-action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copiar
+        </span>
+      </div>
+      <div class="email-card" onclick="copyEmail(this, 'gerencia@global24solution.com')">
+        <div class="email-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="email-card-role">Gerencia</span>
+        <span class="email-card-address">gerencia@global24solution.com</span>
+        <span class="email-card-action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copiar
+        </span>
+      </div>
+    </div>
+
+    <form class="lead-form" id="leadForm" novalidate>
+      <div class="lead-form-grid">
+        <div class="lead-field">
+          <label for="lead-nombre">Nombre *</label>
+          <input type="text" id="lead-nombre" name="nombre" placeholder="Nombre completo" required autocomplete="name">
+        </div>
+        <div class="lead-field">
+          <label for="lead-telefono">Teléfono</label>
+          <input type="tel" id="lead-telefono" name="telefono" placeholder="+57 300 000 0000" autocomplete="tel">
+        </div>
+        <div class="lead-field lead-field-full">
+          <label for="lead-email">Correo electrónico</label>
+          <input type="email" id="lead-email" name="email" placeholder="gerente@empresa.com" autocomplete="email">
+        </div>
+        <div class="lead-field lead-field-full">
+          <label for="lead-mensaje">¿Cuántos vehículos tiene su flota?</label>
+          <textarea id="lead-mensaje" name="mensaje" rows="3" placeholder="Ej: Tenemos 40 vehículos y buscamos optimizar el control y la eficiencia de nuestra flota…"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary lead-submit">
+        <span class="lead-btn-text">Solicitar Cotización Corporativa</span>
+      </button>
+      <div class="lead-feedback" id="leadFeedback" aria-live="polite"></div>
+    </form>
+
+    <div class="contacto-phones-grid">
+      <a href="https://wa.me/573005631754" target="_blank" class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <span class="phone-card-role">Ventas</span>
+        <span class="phone-card-number">300 563 1754</span>
+      </a>
+      <a href="https://wa.me/573103036756" target="_blank" class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V8H6a2 2 0 01-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg>
+        </div>
+        <span class="phone-card-role">Cotizaciones</span>
+        <span class="phone-card-number">310 303 6756</span>
+      </a>
+      <a href="https://wa.me/573138700106" target="_blank" class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <span class="phone-card-role">Soporte Técnico</span>
+        <span class="phone-card-number">313 870 0106</span>
+      </a>
+      <a href="https://wa.me/573155884189" target="_blank" class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="phone-card-role">Administrativa</span>
+        <span class="phone-card-number">315 588 4189</span>
+      </a>
+    </div>
+    <div class="contacto-address">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Cra 50 #1g-10, Barrio Jazmín — Bogotá, Colombia</span>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="footer-brand">GLOBAL 24 GPS COLOMBIA S.A.S. — NIT 901.708.226-6</span>
+  <div class="footer-links">
+    <a href="terminos.html">Términos y Condiciones</a><span class="footer-sep">·</span>
+    <a href="privacidad.html">Política de Privacidad</a>
+  </div>
+  <span>© 2026 Todos los derechos reservados. Desarrollado por <a href="https://blinqoficial.com" target="_blank">Blinq</a></span>
+</footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/573005631754?text=Hola%2C%20necesito%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- CHATBOT FAQ FLOTANTE -->
+<div class="chatbot-widget" id="chatbotWidget">
+  <button class="chatbot-toggle" id="chatbotToggle" aria-label="Preguntas frecuentes">
+    <svg class="chat-icon-chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <svg class="chat-icon-x" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span class="chatbot-badge">?</span>
+  </button>
+  <div class="chatbot-panel" id="chatbotPanel">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="chatbot-header-info">
+        <span class="chatbot-name">Asistente Global 24</span>
+        <span class="chatbot-status"><span class="chatbot-dot"></span>En línea ahora</span>
+      </div>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chatbot-msg-bot">
+        <p>¡Hola! Soy el asistente de <strong>Global 24 GPS de Colombia</strong>. Seleccione una pregunta o contáctenos directamente.</p>
+      </div>
+    </div>
+    <div class="chatbot-faqs">
+      <button class="chatbot-faq" data-faq="niveles">
+        <span class="chatbot-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+        <span class="chatbot-faq-text">¿Qué diferencia hay entre Nivel 1 y Nivel 3?</span>
+      </button>
+      <button class="chatbot-faq" data-faq="precio">
+        <span class="chatbot-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>
+        <span class="chatbot-faq-text">¿Cuánto cuesta el servicio GPS?</span>
+      </button>
+      <button class="chatbot-faq" data-faq="comodato">
+        <span class="chatbot-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8H6a2 2 0 01-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg></span>
+        <span class="chatbot-faq-text">¿Cómo funciona el comodato?</span>
+      </button>
+      <button class="chatbot-faq" data-faq="normativo">
+        <span class="chatbot-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.66 0 3.22.45 4.56 1.24"/></svg></span>
+        <span class="chatbot-faq-text">¿Qué es FUEC y Pre-operacional?</span>
+      </button>
+      <button class="chatbot-faq" data-faq="soporte">
+        <span class="chatbot-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <span class="chatbot-faq-text">¿Tienen soporte técnico 24/7?</span>
+      </button>
+      <button class="chatbot-faq" data-faq="demo">
+        <span class="chatbot-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+        <span class="chatbot-faq-text">¿Cómo solicito una demostración?</span>
+      </button>
+    </div>
+    <div class="chatbot-footer">
+      <a href="https://wa.me/573005631754?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20el%20monitoreo%20GPS" class="chatbot-wa-btn" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hablar con un asesor
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Nav Scroll
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.pageYOffset>50)},{passive:true});
+
+// Mobile Menu
+const toggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks'),overlay=document.getElementById('navOverlay');
+function closeMenu(){toggle.classList.remove('active');navLinks.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow=''}
+toggle.addEventListener('click',()=>{const o=navLinks.classList.contains('open');o?closeMenu():(toggle.classList.add('active'),navLinks.classList.add('open'),overlay.classList.add('open'),document.body.style.overflow='hidden')});
+overlay.addEventListener('click',closeMenu);
+if(document.getElementById('navClose')) document.getElementById('navClose').addEventListener('click',closeMenu);
+navLinks.querySelectorAll('a').forEach(l=>l.addEventListener('click',closeMenu));
+
+// Reveal Animations
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{rootMargin:'0px 0px -60px 0px',threshold:0.1});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger-children').forEach(el=>obs.observe(el));
+
+// Counters
+const counterObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){const el=x.target,target=parseInt(el.dataset.target)||0,suffix=el.dataset.suffix||'';let start=0;const dur=2000,step=ts=>{if(!start)start=ts;const p=Math.min((ts-start)/dur,1);el.textContent=Math.floor(p*target)+(p===1?'+':'')+suffix;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);counterObs.unobserve(el)}})},{threshold:0.3});
+document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+
+// Copy Email to Clipboard
+function copyEmail(card, email) {
+  navigator.clipboard.writeText(email).then(function() {
+    var action = card.querySelector('.email-card-action');
+    var original = action.innerHTML;
+    action.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg> Copiado';
+    card.classList.add('copied');
+    setTimeout(function() {
+      action.innerHTML = original;
+      card.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+// Lead form submission
+const leadForm=document.getElementById('leadForm');
+const leadFeedback=document.getElementById('leadFeedback');
+if(leadForm){leadForm.addEventListener('submit',async function(e){e.preventDefault();const btn=this.querySelector('.lead-submit');const btnText=btn.querySelector('.lead-btn-text');const data={nombre:this.nombre.value.trim(),email:this.email.value.trim(),telefono:this.telefono.value.trim(),mensaje:this.mensaje.value.trim()};if(!data.nombre){leadFeedback.textContent='Por favor ingrese su nombre.';leadFeedback.className='lead-feedback lead-feedback-error';return;}btn.disabled=true;btnText.textContent='Enviando…';leadFeedback.textContent='';try{const res=await fetch('/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});if(res.ok){leadFeedback.textContent='✓ Mensaje enviado. Un asesor se pondrá en contacto con usted a la brevedad.';leadFeedback.className='lead-feedback lead-feedback-success';leadForm.reset();}else{throw new Error('server');}}catch{leadFeedback.textContent='Error al enviar. Contáctenos por WhatsApp.';leadFeedback.className='lead-feedback lead-feedback-error';}finally{btn.disabled=false;btnText.textContent='Solicitar Cotización Corporativa';}})}
+
+// Chatbot FAQ
+(function(){
+  const faqs={
+    niveles:'La <strong>Plataforma Nivel 1</strong> cubre lo esencial (excesos de velocidad, kilometraje, geocercas). La <strong>Plataforma Nivel 3</strong> agrega enrutamientos, mantenimiento preventivo, analítica avanzada y cumplimiento normativo (FUEC/Pre-operacional). Vea la comparativa completa arriba.',
+    precio:'El valor depende de la modalidad: <strong>venta</strong> (equipo propio, contrato a 1 año) o <strong>comodato</strong> (equipo incluido en la mensualidad). Consulte los valores exactos por nivel en la sección de Planes y Modalidades.',
+    comodato:'En modalidad <strong>comodato</strong> suministramos el dispositivo GPS sin inversión inicial. Tras <strong>18 meses de servicio continuo</strong>, el equipo pasa a ser propiedad del contratante.',
+    normativo:'<strong>FUEC</strong> y <strong>Pre-operacional</strong> son herramientas de cumplimiento normativo para transporte especial, disponibles solo en Plataforma Nivel 3, gestionadas por vehículo directamente desde la plataforma.',
+    soporte:'Sí, nuestro centro de monitoreo opera <strong>24 horas, 7 días a la semana</strong>, con atención personalizada por WhatsApp.',
+    demo:'Puede solicitar su cotización personalizada por <strong>WhatsApp</strong>, llamar directamente, o completar el formulario de contacto en esta misma página.'
+  };
+  const widget=document.getElementById('chatbotWidget');
+  const toggle=document.getElementById('chatbotToggle');
+  const messages=document.getElementById('chatbotMessages');
+  if(widget){
+    toggle.addEventListener('click',()=>widget.classList.toggle('chatbot-open'));
+    document.querySelectorAll('.chatbot-faq').forEach(faqBtn=>{
+      faqBtn.addEventListener('click',function(){
+        const key=this.dataset.faq;
+        const answer=faqs[key];
+        if(!answer)return;
+        const userMsg=document.createElement('div');
+        userMsg.className='chatbot-msg-user';
+        userMsg.textContent=this.textContent.trim();
+        messages.appendChild(userMsg);
+        const typing=document.createElement('div');
+        typing.className='chatbot-msg-bot chatbot-typing';
+        typing.innerHTML='<span></span><span></span><span></span>';
+        messages.appendChild(typing);
+        messages.scrollTop=messages.scrollHeight;
+        setTimeout(()=>{
+          typing.remove();
+          const botMsg=document.createElement('div');
+          botMsg.className='chatbot-msg-bot';
+          botMsg.innerHTML='<p>'+answer+'</p>';
+          messages.appendChild(botMsg);
+          messages.scrollTop=messages.scrollHeight;
+        },700);
+        this.disabled=true;
+        this.style.opacity='0.38';
+      });
+    });
+  }
+})();
+
+// Accordions Logic
+function toggleAccordion(btn) {
+  const item = btn.parentElement;
+  const content = item.querySelector('.accordion-content');
+  const isActive = item.classList.contains('active');
+  
+  // Close all other accordions (Optional behavior)
+  // document.querySelectorAll('.accordion-item').forEach(el => {
+  //   el.classList.remove('active');
+  //   el.querySelector('.accordion-content').style.maxHeight = null;
+  // });
+
+  if (!isActive) {
+    item.classList.add('active');
+    content.style.maxHeight = content.scrollHeight + "px";
+  } else {
+    item.classList.remove('active');
+    content.style.maxHeight = null;
+  }
+}
+</script>
+</body>
+</html>
