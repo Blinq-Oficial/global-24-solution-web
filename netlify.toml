@@ -16,6 +16,17 @@
   to = "/.netlify/functions/get-leads"
   status = 200
 
+# Privacy policy — redirect desde la URL configurada en las apps GPS
+[[redirects]]
+  from = "/privacy-policy-global-tracker"
+  to = "/privacidad.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy-global-tracker/"
+  to = "/privacidad.html"
+  status = 301
+
 # Admin panel — sirve el HTML directamente
 [[redirects]]
   from = "/admin"
