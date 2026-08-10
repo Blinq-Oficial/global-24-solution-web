@@ -70,6 +70,16 @@
 .accordion-content .devices-grid, .accordion-content .benefits-grid, .accordion-content .camera-grid { padding: 0; gap: 12px; }
 .accordion-content .benefit-card, .accordion-content .camera-card, .accordion-content .device-card { padding: 16px; }
 
+/* === FICHA TECNICA DOWNLOAD BUTTON === */
+.btn-ficha {
+  display:inline-flex; align-items:center; gap:8px; margin-top:14px;
+  padding:10px 18px; font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:700;
+  color:#FFF; background:var(--brand-navy); border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--radius-sm); cursor:pointer; text-decoration:none;
+  transition:all 0.25s ease; letter-spacing:0.3px;
+}
+.btn-ficha:hover { background:#0E1E38; transform:translateY(-2px); box-shadow:0 6px 20px rgba(10,22,40,0.3); }
+.btn-ficha svg { width:14px; height:14px; stroke:var(--brand-orange); flex-shrink:0; }
 
 /* === MOBILE OPTIMIZATION PATCH === */
 
@@ -373,6 +383,30 @@
   </div>
 </section>
 
+<!-- VIDEO SHOWCASE 2 — INTERFAZ DE PLATAFORMA -->
+<section class="video-showcase" style="background:var(--bg-secondary);">
+  <div class="video-showcase-layout" style="direction:rtl;">
+    <div class="video-showcase-player reveal-right" style="direction:ltr;">
+      <video autoplay loop muted playsinline>
+        <source src="assets/video-plataforma-ui.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-showcase-content reveal-left" style="direction:ltr;">
+      <span class="section-label">Interfaz de Gestión</span>
+      <h2>Plataforma <span class="gradient-text">Intuitiva y Poderosa</span></h2>
+      <p>Navegue por la interfaz de nuestra plataforma de gestión de flotas. Diseñada para que su equipo tome decisiones rápidas con información clara y accesible.</p>
+      <ul class="video-features-list">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Panel centralizado con vista de toda la flota</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Reportes automáticos programados por correo</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gestión de geocercas y puntos de referencia</li>
+      </ul>
+      <div class="video-cta-strip">
+        <a href="plataformas.html" class="btn btn-secondary">Conocer Plataformas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- COMPARATIVA PLATAFORMAS -->
 <section class="compare-section" id="plataformas-compare">
   <div class="section-header-center reveal">
@@ -527,6 +561,10 @@
                 <li>Batería de respaldo interna</li>
                 <li>Instalación oculta — tamaño ultra compacto</li>
               </ul>
+              <a href="assets/ficha-tecnica-vt08f.pdf" target="_blank" class="btn-ficha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar Ficha Técnica (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -554,6 +592,10 @@
                 <li>Precisión GPS ≤5m · Batería 250mAh</li>
                 <li>Dimensiones: 79.5×42×12.5mm (51g)</li>
               </ul>
+              <a href="assets/ficha-tecnica-gs10g.pdf" target="_blank" class="btn-ficha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar Ficha Técnica (PDF)
+              </a>
             </div>
             <div class="device-card" style="box-shadow:none;">
               <span class="device-badge" style="background:rgba(212,43,43,0.1);color:#D42B2B">4G LTE</span>
@@ -568,6 +610,10 @@
                 <li>Dimensiones: 85×45×17mm</li>
                 <li>Monitoreo de hábitos de conducción</li>
               </ul>
+              <a href="assets/ficha-tecnica-boxtracker.pdf" target="_blank" class="btn-ficha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar Ficha Técnica (PDF)
+              </a>
             </div>
           </div>
         </div>
