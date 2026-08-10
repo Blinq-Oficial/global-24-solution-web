@@ -4,3 +4,8 @@
 node_modules/
 .netlify/
 __pycache__/
+
+# Environment secrets
+.env
+.env.local
+.env.*
