@@ -17,13 +17,13 @@ export default async (req: Request, _context: Context): Promise<Response> => {
   const db = getDatabase();
 
   try {
-    const result = await db.sql`
+    const rows = await db.sql`
       SELECT id, nombre, email, telefono, mensaje, creado_en
       FROM leads
       ORDER BY creado_en DESC
     `;
 
-    return json({ leads: result.rows, total: result.rows.length }, 200);
+    return json({ leads: rows, total: rows.length }, 200);
   } catch (err) {
     console.error("[get-leads] DB error:", err);
     return json({ error: "Error interno" }, 500);

@@ -244,6 +244,12 @@ async function loadLeads(token) {
     }
 
     const data = await res.json();
+
+    if (!res.ok) {
+      tbody.innerHTML = `<tr class="loading-row"><td colspan="6">Error del servidor: ${esc(data.error || res.status)}</td></tr>`;
+      return;
+    }
+
     const leads = data.leads ?? [];
 
     renderStats(leads);
