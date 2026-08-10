@@ -2,7 +2,8 @@
 
 ## 1. Despliegue (Hosting)
 - **Proveedor:** Netlify
-- **Método de despliegue:** Netlify CLI (`npx netlify deploy --prod`) o sincronización Git (si está configurada).
+- **Método de despliegue:** Auto-deploy vía sincronización Git — cada push a `main` en `Blinq-Oficial/global-24-solution-web` dispara un build automático (`provider: github`, verificado por API el 2026-08-10). Alternativa manual: Netlify CLI (`netlify deploy --prod`).
+- **⚠️ Historial:** entre 2026-08-04 y 2026-08-10 el sitio estuvo desconectado de GitHub (corría sobre un repo interno `netlify-git` no persistente) — los pushes durante esos 6 días no se desplegaron. Antes de asumir que un cambio ya está en producción, comparar la fecha del último deploy (`netlify api listSiteDeploys`) contra la fecha del último commit.
 - **Directorio de Publicación:** `src/` (Configurado en `netlify.toml`).
 - **Edge Functions / Serverless:** ✅ Implementado — `netlify/functions/submit-lead.ts` (`/api/leads`) recibe el formulario de contacto y guarda en Neon PostgreSQL vía `@netlify/database`; `get-leads.ts` (`/api/admin/leads`) alimenta el panel `/admin`.
 
