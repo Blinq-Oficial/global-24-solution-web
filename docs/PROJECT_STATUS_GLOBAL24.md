@@ -52,9 +52,19 @@ Durante la última iteración, se definió un pivote estratégico en la comunica
 
 ## ⏳ Tareas Pendientes (Backlog)
 
-- [ ] **Agregar Cobertura Internacional:** Incluir en la página web un apartado o nota sobre el soporte de localización en **Suramérica** y el uso de **SIM multioperador (Roaming)**. *(Verificado 08 jul: aún no existe ninguna mención en el código — falta confirmar con el cliente qué países de Suramérica y qué operadores, para no inventar datos.)*
+- [x] **Agregar Cobertura Internacional:** Incluido en la sección de Cobertura del sitio.
 - [ ] **Power BI / Automatización de Informes:** Decisión de negocio pendiente — Samuel presentará opciones al equipo. La opción evaluada es un plan mensual de Power BI versión completa para automatizar los informes de flota que hoy Auxiliar EAAB arma manualmente en Excel (~2h por informe). *(Ver nota de asesoría técnica en `Reunion_2026-07-06_Notas_Gemini.md` sobre una alternativa: automatizar solo la etapa de preparación de datos con un script a medida, y usar una herramienta de visualización gratuita en vez de pagar licencias de Power BI.)*
 - [ ] **Imágenes Reales de Informes:** Recibir por parte de Operaciones (Auxiliar EAAB) capturas de pantalla reales de los informes generados actualmente para incluirlos en la galería visual de la página web.
 
 ---
-*Última actualización: 08 de Julio de 2026.*
+
+## 🚀 Despliegue Final (Agosto 10, 2026)
+
+Se realizó una integración exhaustiva de assets pendientes y un push final a producción:
+1. **Fichas Técnicas:** Se integraron los 3 PDF corporativos de equipos (VT08F, GS10G, BOXTRACKER) añadiendo botones de descarga nativos al catálogo.
+2. **Video Showcase 2:** Se integró el video promocional UI de la plataforma (`video-plataforma-ui.mp4`) añadiendo una sección completa en la landing con diseño invertido (`rtl`).
+3. **Admin Panel:** Se constató que `ADMIN_SECRET` ya estaba operando correctamente en Netlify sin necesidad de intervención manual.
+4. **Deploy:** Todos los commits locales se sincronizaron con `origin/main` y se desplegaron con éxito.
+
+---
+*Última actualización: 10 de Agosto de 2026.*
