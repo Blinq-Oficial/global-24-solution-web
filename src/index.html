@@ -81,6 +81,17 @@
 .btn-ficha:hover { background:#0E1E38; transform:translateY(-2px); box-shadow:0 6px 20px rgba(10,22,40,0.3); }
 .btn-ficha svg { width:14px; height:14px; stroke:var(--brand-orange); flex-shrink:0; }
 
+/* === COTIZAR POR WHATSAPP (catalogo de equipos) === */
+.btn-consulta {
+  display:inline-flex; align-items:center; gap:8px; margin-top:10px;
+  padding:10px 18px; font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:700;
+  color:#FFF; background:#25D366; border-radius:var(--radius-sm);
+  cursor:pointer; text-decoration:none; letter-spacing:0.3px;
+  box-shadow:0 4px 14px rgba(37,211,102,0.28); transition:all 0.25s ease;
+}
+.btn-consulta:hover { background:#1EBE5A; transform:translateY(-2px); box-shadow:0 6px 20px rgba(37,211,102,0.38); }
+.btn-consulta svg { width:14px; height:14px; fill:#FFF; flex-shrink:0; }
+
 /* === MOBILE OPTIMIZATION PATCH === */
 
 @media(max-width:768px){
@@ -486,16 +497,16 @@
   </div>
   <div class="compare-footer reveal">
     <p>* La plataforma <strong>Nivel Complementario (ATS Preoperacional)</strong> está disponible para flotas con requerimientos intermedios.</p>
-    <a href="#modalidades" class="btn btn-primary">Ver Precios y Modalidades</a>
+    <a href="#modalidades" class="btn btn-primary">Ver Planes y Modalidades</a>
   </div>
 </section>
 
-<!-- MODALIDADES & PRECIOS -->
+<!-- MODALIDADES -->
 <section class="modalidades" id="modalidades">
   <div class="section-header-center reveal">
     <span class="section-label">Modelos de Negocio</span>
     <h2>Planes y <span class="gradient-text">Modalidades</span></h2>
-    <p class="section-subtitle">Soluciones adaptadas al tamaño de su operación. Cotización exenta de IVA en la mensualidad.</p>
+    <p class="section-subtitle">Soluciones adaptadas al tamaño de su operación. Cotización personalizada según su flota, sin costos ocultos.</p>
   </div>
   
   <div class="modalidades-grid stagger-children">
@@ -509,16 +520,16 @@
       <div class="modalidad-card-pricing">
         <div class="modalidad-price-row">
           <span class="modalidad-level">Nivel 1</span>
-          <span class="modalidad-amount">$33.000<small> / móvil / mes</small></span>
+          <span class="modalidad-available"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="13" height="13" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg> Disponible</span>
         </div>
         <div class="modalidad-price-row modalidad-price-row-alt">
           <span class="modalidad-level modalidad-level-premium">Nivel Premium</span>
-          <span class="modalidad-amount">$40.700<small> / móvil / mes</small></span>
+          <span class="modalidad-available"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="13" height="13" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg> Disponible</span>
         </div>
       </div>
       <div class="modalidad-card-footer">
-        <p class="modalidad-note">* GPS no incluido (ver catálogo desplegable).</p>
-        <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20Modalidad%20Venta%20para%20mi%20flota" class="btn btn-whatsapp modalidad-cta" target="_blank">Me interesa Modalidad Venta</a>
+        <p class="modalidad-note">* Valor mensual por móvil según el nivel de plataforma y el tamaño de la flota. GPS no incluido (ver catálogo desplegable).</p>
+        <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20Modalidad%20Venta%20para%20mi%20flota" class="btn btn-whatsapp modalidad-cta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar Modalidad Venta</a>
       </div>
     </div>
 
@@ -533,16 +544,16 @@
       <div class="modalidad-card-pricing">
         <div class="modalidad-price-row">
           <span class="modalidad-level">Nivel 1</span>
-          <span class="modalidad-amount">$48.000<small> / móvil / mes</small></span>
+          <span class="modalidad-available"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="13" height="13" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg> Disponible</span>
         </div>
         <div class="modalidad-price-row modalidad-price-row-alt">
           <span class="modalidad-level modalidad-level-premium">Nivel Premium</span>
-          <span class="modalidad-amount">$55.700<small> / móvil / mes</small></span>
+          <span class="modalidad-available"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="13" height="13" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg> Disponible</span>
         </div>
       </div>
       <div class="modalidad-card-footer">
-        <p class="modalidad-note">* Instalación: $65.000 + IVA (ciudades principales).</p>
-        <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20Modalidad%20Comodato%20para%20mi%20flota" class="btn btn-whatsapp modalidad-cta" target="_blank">Me interesa Modalidad Comodato</a>
+        <p class="modalidad-note">* Instalación realizada por técnicos certificados en ciudades principales, cotizada según su operación.</p>
+        <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20Modalidad%20Comodato%20para%20mi%20flota" class="btn btn-whatsapp modalidad-cta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar Modalidad Comodato</a>
       </div>
     </div>
   </div>
@@ -572,6 +583,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Descargar Ficha Técnica (PDF)
               </a>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20el%20GPS%20VT08F" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar VT08F por WhatsApp</a>
             </div>
           </div>
         </div>
@@ -603,6 +615,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Descargar Ficha Técnica (PDF)
               </a>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20el%20GPS%20GS10G" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar GS10G por WhatsApp</a>
             </div>
             <div class="device-card" style="box-shadow:none;">
               <span class="device-badge" style="background:rgba(212,43,43,0.1);color:#D42B2B">4G LTE</span>
@@ -621,6 +634,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Descargar Ficha Técnica (PDF)
               </a>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20el%20GPS%20BOXTRACKER" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar BOXTRACKER por WhatsApp</a>
             </div>
           </div>
         </div>
@@ -646,6 +660,7 @@
                 <li>Instalación instantánea — sin cables</li>
                 <li>Datos OBD en tiempo real</li>
               </ul>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20el%20GPS%20Teltonika%20FMC003" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar FMC003 por WhatsApp</a>
             </div>
             <div class="device-card" style="box-shadow:none;text-align:center;">
               <img src="assets/teltonika-fmc125.jpeg" alt="Teltonika FMC125 LTE GNSS BLE Terminal">
@@ -657,6 +672,7 @@
                 <li>Voltaje 10-30V · Telemetría avanzada</li>
                 <li>RS232 + RS485 + 1-Wire</li>
               </ul>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20el%20GPS%20Teltonika%20FMC125" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar FMC125 por WhatsApp</a>
             </div>
             <div class="device-card" style="box-shadow:none;text-align:center;">
               <img src="assets/teltonika-fmc920.jpeg" alt="Teltonika FMC920 rastreador compacto">
@@ -668,10 +684,12 @@
                 <li>Voltaje 10-30V · 0.25A Max</li>
                 <li>GNSS + BLE · G-Sensor integrado</li>
               </ul>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20el%20GPS%20Teltonika%20FMC920" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar FMC920 por WhatsApp</a>
             </div>
           </div>
           <div class="accordion-addons-note">
-            Servicios adicionales (Nivel Premium): FUEC ($1.500/auto), Pre-Operacional ($5.500/auto), Form. Control ($45.000/app).
+            <p>Servicios adicionales disponibles en <strong>Nivel Premium</strong>: FUEC, Pre-Operacional y Formularios de Control, cotizados por vehículo según el tamaño de su flota.</p>
+            <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20los%20servicios%20adicionales%20(FUEC%2C%20Pre-Operacional%2C%20Formularios%20de%20Control)" class="btn-consulta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar servicios adicionales</a>
           </div>
         </div>
       </div>
@@ -698,9 +716,8 @@
                 <li>Transmisión de video en tiempo real vía 4G</li>
                 <li>Grabación continua con almacenamiento local</li>
               </ul>
-              <div class="camera-pricing-row"><span class="camera-pricing-label">Equipo + Inst.</span><span class="camera-pricing-value">$1.520.522 (IVA inc.)</span></div>
-              <div class="camera-pricing-row"><span class="camera-pricing-label">Mensualidad</span><span class="camera-pricing-value">$84.150</span></div>
-              <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20dashcam%20JC-261" class="btn btn-whatsapp modalidad-cta" target="_blank">Cotizar JC-261</a>
+              <p class="camera-quote-note">Equipo, instalación y mensualidad cotizados según el tamaño de su flota.</p>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20la%20dashcam%20JC-261" class="btn btn-whatsapp modalidad-cta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar JC-261 por WhatsApp</a>
             </div>
             <div class="camera-card" style="box-shadow:none;">
               <img src="assets/dashcam-jc400-detail.jpeg" alt="JC400 AiVision Cam dashcam GPS">
@@ -711,9 +728,8 @@
                 <li>Botón de pánico SOS + relé de corte incluido</li>
                 <li>4G/3G/2G + WiFi · Batería externa 450mAh</li>
               </ul>
-              <div class="camera-pricing-row"><span class="camera-pricing-label">Equipo + Inst.</span><span class="camera-pricing-value">$1.520.522 (IVA inc.)</span></div>
-              <div class="camera-pricing-row"><span class="camera-pricing-label">Mensualidad</span><span class="camera-pricing-value">$69.300</span></div>
-              <a href="https://wa.me/573005631754?text=Hola%2C%20me%20interesa%20la%20dashcam%20JC400" class="btn btn-whatsapp modalidad-cta" target="_blank">Cotizar JC400</a>
+              <p class="camera-quote-note">Equipo, instalación y mensualidad cotizados según el tamaño de su flota.</p>
+              <a href="https://wa.me/573005631754?text=Hola%2C%20quiero%20cotizar%20la%20dashcam%20JC400" class="btn btn-whatsapp modalidad-cta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Cotizar JC400 por WhatsApp</a>
             </div>
           </div>
         </div>
@@ -1036,7 +1052,7 @@ if(leadForm){leadForm.addEventListener('submit',async function(e){e.preventDefau
 (function(){
   const faqs={
     niveles:'La <strong>Plataforma Nivel 1</strong> (100% colombiana) cubre lo esencial: excesos de velocidad, kilometraje, geocercas. La <strong>Plataforma Nivel Premium</strong> (Global 24 Mobile) agrega enrutamientos, mantenimiento preventivo, analítica avanzada y cumplimiento normativo (FUEC/Pre-operacional). Vea la comparativa completa arriba.',
-    precio:'El valor depende de la modalidad: <strong>venta</strong> (equipo propio, contrato a 1 año) o <strong>comodato</strong> (equipo incluido en la mensualidad). Consulte los valores exactos por nivel en la sección de Planes y Modalidades.',
+    precio:'El valor depende de la modalidad — <strong>venta</strong> (equipo propio, contrato a 1 año) o <strong>comodato</strong> (equipo incluido en la mensualidad) —, del nivel de plataforma y del tamaño de su flota. Cada cotización es personalizada: escríbanos por <strong>WhatsApp</strong> y un asesor le envía los valores de su operación.',
     comodato:'En modalidad <strong>comodato</strong> suministramos el dispositivo GPS sin inversión inicial. Tras <strong>18 meses de servicio continuo</strong>, el equipo pasa a ser propiedad del contratante.',
     normativo:'<strong>FUEC</strong> y <strong>Pre-operacional</strong> son herramientas de cumplimiento normativo para transporte especial, disponibles solo en Plataforma Nivel Premium, gestionadas por vehículo directamente desde la plataforma.',
     soporte:'Sí, nuestro centro de monitoreo opera <strong>24 horas, 7 días a la semana</strong>, con atención personalizada por WhatsApp.',

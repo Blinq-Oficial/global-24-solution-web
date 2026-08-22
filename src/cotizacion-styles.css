@@ -250,12 +250,10 @@
   font-size:0.85rem; color:var(--text-secondary); padding:6px 0 6px 20px; position:relative;
 }
 .camera-specs li::before { content:'•'; position:absolute; left:0; color:var(--brand-orange); font-weight:700; }
-.camera-pricing-row {
-  display:flex; justify-content:space-between; align-items:baseline;
-  padding:10px 0; border-top:1px solid var(--glass-border);
+.camera-quote-note {
+  font-size:0.82rem; color:var(--text-muted); line-height:1.6;
+  padding-top:12px; margin-bottom:16px; border-top:1px solid var(--glass-border);
 }
-.camera-pricing-label { font-size:0.82rem; color:var(--text-muted); }
-.camera-pricing-value { font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--brand-red); }
 
 /* Pillars */
 .pillars-section { padding:80px 6%; background:var(--bg-secondary); border-top:1px solid var(--glass-border); }
