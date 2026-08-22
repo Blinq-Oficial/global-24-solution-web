@@ -111,4 +111,57 @@ Verificado: `overflow = 0` en las 5 páginas, en 320/375/390/428px, con el menú
 Mensaje de estado enviado por Samuel al grupo de WhatsApp del cliente con el link del sitio actualizado. Pendiente: confirmación de conformidad → cuenta de cobro.
 
 ---
-*Última actualización: 10 de Agosto de 2026 (tarde).*
+*Sesión del 10 de Agosto de 2026 (tarde) — cerrada.*
+
+---
+
+## 💰 Sesión 22 de Agosto de 2026 — Retiro de Precios Públicos
+
+Solicitud directa del CEO: **quitar todos los precios de la página web** antes de una reunión con clientes importantes, porque van a cotizar con valores más altos. Los precios publicados venían de la cotización oficial de marzo 2026 y ya no reflejaban la intención comercial de la empresa.
+
+### Auditoría
+Los **11 precios estaban todos en `src/index.html`**, en la sección "Planes y Modalidades". Revisadas y descartadas: `plataformas.html`, `terminos.html` (ya decía que los precios se comunican de forma personalizada), `privacidad.html`, `404.html` y el panel admin.
+
+| Ubicación | Valor retirado |
+|:--|:--|
+| Modalidad Venta | $33.000 (Nivel 1) y $40.700 (Nivel Premium) / móvil / mes |
+| Modalidad Comodato | $48.000 (Nivel 1) y $55.700 (Nivel Premium) / móvil / mes |
+| Nota Comodato | Instalación $65.000 + IVA |
+| Servicios adicionales | FUEC $1.500/auto · Pre-Operacional $5.500/auto · Form. Control $45.000/app |
+| Dashcam JC-261 | Equipo + inst. $1.520.522 · mensualidad $84.150 |
+| Dashcam JC400 | Equipo + inst. $1.520.522 · mensualidad $69.300 |
+
+### Reemplazo: 11 botones de cotización por WhatsApp
+Cada botón abre `wa.me/573005631754` con mensaje **prellenado y específico del producto**, para que el asesor sepa de entrada por qué equipo preguntan.
+
+- **6 equipos del catálogo GPS que no tenían ninguna acción de contacto** (VT08F, GS10G, BOXTRACKER, Teltonika FMC003, FMC125, FMC920). Era una brecha de conversión preexistente: se podía leer la ficha técnica completa sin ninguna forma de pedir precio desde ahí.
+- 2 dashcams (JC-261, JC400), 2 modalidades (Venta, Comodato) y 1 de servicios adicionales.
+- Las filas de precio de las modalidades pasaron a mostrar la **disponibilidad por nivel** en vez del monto.
+
+### Textos derivados corregidos
+Cuatro puntos quedaban incoherentes al quitar los montos:
+1. Subtítulo de sección: decía "Cotización **exenta de IVA en la mensualidad**".
+2. CTA de la tabla comparativa: "Ver **Precios** y Modalidades" → "Ver Planes y Modalidades".
+3. Nota al pie de Modalidad Venta.
+4. **Respuesta del chatbot FAQ sobre precio**: remitía a "los valores exactos por nivel en la sección de Planes y Modalidades" — valores que ya no existen. Reescrita para derivar a un asesor.
+
+### CSS
+`.modalidad-amount` → `.modalidad-available` (check verde de disponibilidad) · `.camera-pricing-*` → `.camera-quote-note` · nueva `.btn-consulta` (botón WhatsApp compacto para el catálogo, coherente con `.btn-ficha`).
+
+### Verificación y deploy
+- Playwright en escritorio (1440px) y móvil (390px), con todos los acordeones abiertos.
+- `overflow-x = 0` en las 5 páginas — no se rompió la corrección de scroll horizontal del 10-ago.
+- Balance de etiquetas HTML comparado contra `HEAD`, sin regresiones.
+- Commit `ada5b6e` → push a `main` → auto-deploy de Netlify. **Verificado en producción real** (HTML descargado de `global24solution.com`): cero montos, 11 CTAs activos. Siguiendo la lección del 10-ago, no se asumió que el pipeline había funcionado.
+
+### ⚠️ Punto comercial levantado con Gerencia
+Al quitar los valores, **toda la consulta comercial cae ahora sobre el WhatsApp 300 563 1754**. Antes el visitante se auto-filtraba viendo el precio; ahora no. Dos consecuencias comunicadas al CEO:
+1. El equipo comercial debe estar listo para absorber ese flujo.
+2. Queda una decisión de negocio abierta: con la nueva lista de precios ya en firme, definir si se vuelven a publicar o si el modelo de "cotización personalizada" queda permanente.
+
+### Hallazgo menor (fuera de alcance)
+`</div>` huérfano en `src/index.html` (~línea 936, sección de contacto). **Preexistente** — verificado que ya estaba en `HEAD`. Los navegadores ignoran cierres sin pareja, no afecta el render. Anotado para mantenimiento.
+
+---
+*Última actualización: 22 de Agosto de 2026.*
+
